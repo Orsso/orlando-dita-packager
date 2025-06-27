@@ -68,7 +68,6 @@ build.bat
 **Output Structure:**
 - `DATA/topics/` - DITA concept files
 - `DATA/media/` - Extracted images and assets
-- `DATA/dtd/` - Document type definitions
 - Root ditamap with proper Orlando metadata
 
 ---
