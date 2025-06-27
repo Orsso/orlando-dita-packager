@@ -13,7 +13,7 @@ flowchart TD
     C --> D["Parser & Helpers"]
     C --> E["Generators"]
     C --> F["Config Manager"]
-    C --> G["Resources (DTD package)"]
+    C --> G["Resources"]
     B --> H["Packaging I/O"]
 ```
 
@@ -36,7 +36,6 @@ orlando_toolkit/
         utils.py           # Helper utilities (slugify, XML save, colour mapping)
     config/
         manager.py         # YAML loader + runtime overrides
-    dtd_package/           # Bundled OASIS & vendor DTDs  (≈ 9 MB)
     ui/                    # Modernised Tkinter tabs/widgets
     resources/            # (reserved)
 ```
@@ -96,14 +95,14 @@ If PyYAML is missing, built-in defaults guarantee the application still runs.
 
 ## 6 Resources
 
-As of Phase-9 the generated ZIP is **self-contained without embedded DTDs or ditaval files**.  All public identifiers remain intact so any downstream toolchain (incl. Orlando CMS) can resolve them through its own catalog. The legacy `dtd_package` folder is still shipped for backward compatibility but is no longer copied during packaging.
+As of Phase-9 the generated ZIP is **self-contained without embedded ditaval files**.  All public identifiers remain intact so any downstream toolchain (incl. Orlando CMS) can resolve them through its own catalog.
 
 ---
 
 ## 7 Build & distribution
 
 * **Windows executable** – `build_exe.py` calls PyInstaller with
-  single-file, windowed mode, bundling assets and DTDs.
+  single-file, windowed mode, bundling assets.
 * **Source distribution** – `python -m build` produces a PEP 517 wheel; no C-extensions.
 
 
