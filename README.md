@@ -38,8 +38,6 @@ Orlando Toolkit converts Microsoft Word (.docx) files into DITA archives that co
 
 **Requirements:** Python 3.13+ (Windows/macOS/Linux)
 
-> ⚠️ On Windows the provided `build.bat` will silently install Python 3.13 via **winget** if it is not detected, so you can run the build out-of-the-box.
-
 ```bash
 # Clone and setup
 git clone https://github.com/Orsso/orlando-toolkit
@@ -51,7 +49,7 @@ python run.py
 ```
 
 ### Option 3: Build Executable
-
+> ⚠️ On Windows the provided `build.bat` will silently install Python 3.13 via **winget** if it is not detected, so you can run the build out-of-the-box.
 ```bash
 # Windows
 build.bat
