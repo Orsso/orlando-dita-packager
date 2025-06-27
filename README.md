@@ -83,8 +83,8 @@ orlando_toolkit/
 │   ├── parser/        # Document analysis and extraction
 │   ├── generators/    # DITA XML builders
 │   └── services/      # High-level conversion orchestration
-├── ui/                # Tkinter GUI components
-└── dtd_package/       # Bundled DITA DTDs and catalogs
+└── ui/                # Tkinter GUI components
+
 ```
 
 ### Supported Elements
